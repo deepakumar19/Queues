@@ -1,3 +1,4 @@
+import javax.print.attribute.Size2DSyntax;
 
 class Queue {
     private int data[];
@@ -56,6 +57,10 @@ class Queue {
         int elem = data[front];
         front++;
         size--;
+        if(size == 0){
+            front =-1;
+            rear=-1;
+        }
         return elem;
     }
 
